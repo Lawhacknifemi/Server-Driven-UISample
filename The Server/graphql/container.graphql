@@ -1,0 +1,10 @@
+type Container {
+  containerType: ContainerType!
+  elements: [ContainerElement!]
+}
+
+enum ContainerType {
+  ROW
+  COLUMN
+}
+
