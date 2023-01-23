@@ -50,59 +50,14 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colors.background
                     ) {
-                        containerFactory(component = res)
+
                     }
                 }
             }
         }
     }
-    @Composable
-    fun containerElementFactory(component : List<Container.Element>?) {
-        component?.forEach {
-            when(it.__typename){
-                "Typography" -> Typography(data = it.typography!!)
-                "Button" -> GeneralButton(data = it.button!!)
-                "Image" -> GeneralImage(url = it.image?.url!!, alt = it.image.alt)
-                "Card" -> Card(card = it.card!!)
-                "TextInput" -> TextFieldInput(textInput = it.textInput!!, textFieldValue = textFieldValue )
-                "Banner" -> Banner(banner = it.banner!!)
-                "Chip" -> TextChip(chip = it.chip!!)
-                "IconButton" -> IconButton(iconButton = it.iconButton!!)
-                else -> Text(text = "Nothing to show ")
-            }
-        }
-    }
-    @Composable
-    fun containerFactory(component : List<SampleScreenView.Element>) {
-        Row (
-            Modifier
-                .fillMaxSize()
-                .fillMaxWidth()
-                .padding(8.dp)
-                .verticalScroll(rememberScrollState())){
-            Column {
-                component.forEach {
-                    when(it.container!!.containerType){
-                        ContainerType.FILL -> Column {
-                            containerElementFactory(component = it.container.elements)
-                        }
-                        ContainerType.COLUMN -> Column(modifier = Modifier.padding(4.dp)) {
-                            containerElementFactory(component = it.container.elements)
-                        }
-                        ContainerType.ROW -> Row(
-                            Modifier
-                                .horizontalScroll(rememberScrollState())
-                                .padding(4.dp)) {
-                            containerElementFactory(component = it.container.elements)
-                        }
-                        else -> Column {
-                            containerElementFactory(component = it.container.elements)
-                        }
-                    }
-                }
-            }
-        }
-    }
+
+
 
 
 }

@@ -1,17 +1,3 @@
-type Banner{
-  primaryText : String,
-  secondaryText : String
-}
-type Container {
-  containerType: ContainerType!
-  elements: [ContainerElement!]
-}
-
-enum ContainerType {
-  ROW
-  COLUMN
-}
-
 """
 BOX
 """
@@ -249,15 +235,6 @@ enum Color {
   SUCCESS
 }
 
-type Query{
-  sampleScreen : SampleScreenView
-}
-"""
-All composable view-elements are to be placed here
-"""
-union ContainerElement = Card | Typography | Box | Button | IconButton | Image | TextInput | Banner | Chip
-
-union ViewElement = Container
 type  SampleScreenView{
   elements: [ViewElement!]!
 }

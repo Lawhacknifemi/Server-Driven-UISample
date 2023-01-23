@@ -1,4 +1,0 @@
-type Banner{
-  primaryText : String,
-  secondaryText : String
-}
