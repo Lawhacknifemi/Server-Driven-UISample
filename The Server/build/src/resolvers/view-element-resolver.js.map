@@ -1,1 +1,0 @@
-{"version":3,"file":"view-element-resolver.js","sourceRoot":"","sources":["../../../src/resolvers/view-element-resolver.ts"],"names":[],"mappings":";;;AAAa,QAAA,mBAAmB,GAAG;IACjC,WAAW,EAAC;QACV,aAAa,CAAC,GAAS;YACrB,IAAI,GAAG,CAAC,QAAQ,IAAI,GAAG,CAAC,aAAa,EAAC;gBACpC,OAAO,WAAW,CAAA;aACnB;YACD,OAAO,IAAI,CAAC;QACd,CAAC;KACF;CACF,CAAA"}

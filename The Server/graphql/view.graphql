@@ -1,3 +1,0 @@
-type  SampleScreenView{
-  elements: [ViewElement!]!
-}
